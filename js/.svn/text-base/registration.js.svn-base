@@ -1,0 +1,32 @@
+$(document).ready(function(){
+	$('#btnNext').on('click', function(){
+		$('.reg-1').hide();
+		$('.reg-2').show();
+	});
+	$('#btnReturn').on('click',function(){
+		$('.reg-1').show();
+		$('.reg-2').hide();
+	});
+});
+
+
+/*
+var elements = whichform.elements;
+	for(var i = 0; i < elements.length; i++) {
+		var element = elements[i];
+		if(element.required || element.getAttribute("required")) {
+			if(!isFilled(element)) {
+				alert("Please fill in the " + element.name + " field.");
+				return false;
+			}
+		}
+		
+	}
+	return true;
+	
+	function isFilled(field) {
+	if(field.value.replace(" ", "").length == 0) return false;
+	var placeholder = field.placeholder || field.getAttribute("placeholder");
+	return(field.value != placeholder);
+}
+*/

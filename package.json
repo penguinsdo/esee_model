@@ -1,0 +1,25 @@
+{
+  "name": "esee_model",
+  "version": "1.0.0",
+  "description": "a website for esee_model collection",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-less": "^3.3.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp.spritesmith": "^6.5.1",
+    "less-plugin-autoprefix": "^1.5.1",
+    "merge-stream": "^1.0.1",
+    "vinyl-buffer": "^1.0.0"
+  }
+}

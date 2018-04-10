@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>报名参赛_中国电商网络模特大赛</title>
+		<link rel="stylesheet" type="text/css" href="css/registration.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html"></a>
+				</div>
+				<ul class="nav">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="introduction.html">大赛介绍</a>
+					</li>
+					<li>
+						<a class="active" href="registration.html">报名参赛</a>
+					</li>
+					<li>
+						<a href="previous-video-list.html">精彩回顾</a>
+					</li>
+					<li>
+						<a href="model-list-female.html">优秀选手</a>
+					</li>
+					<li>
+						<a href="cooperation.html">合作伙伴</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--页面标题-->
+		<div class="container title">
+			<h2>sign up for competition</h2>
+		</div>
+
+		<!--页面主要内容-->
+		<div class="registration container">
+			<form method="post" action="#">
+				<!--报名第一步-->
+				<fieldset class="reg-1">
+					<h3>基本信息</h3>
+					<div class="content">
+						<div class="form-group">
+							<label for="">赛区：</label>
+							<div class="sel-container">
+								<select name="zone">
+									<!--具体赛区设置需和英模沟通-->
+									<option value="" selected="selected" disabled="disabled">请选择赛区</option>
+									<option value="shenyang">沈阳</option>
+									<option value="henan">河南</option>
+									<option value="nignbo">宁波</option>
+									<option value="central-china">华中</option>
+									<option value="guangzhou">广州</option>
+									<option value="wuhan">武汉</option>
+									<option value="shaanxi">陕西</option>
+									<option value="jiangsu">江苏</option>
+									<option value="dalian">大连</option>
+									<option value="sichuan">四川</option>
+									<option value="shandong">山东</option>
+									<option value="jilin">吉林</option>
+									<option value="gansu">甘肃</option>
+									<option value="beijing">北京</option>
+									<option value="hangzhou">杭州</option>
+									<option value="shanghai">上海</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>姓名：</label>
+							<input type="text" name="name" placeholder="请输入姓名" required="required" />
+						</div>
+						<div class="form-group">
+							<label>性别：</label>
+							<select name="sex">
+								<option value="" selected="selected" disabled="disabled">请选择性别</option>
+								<option value="male">男</option>
+								<option value="female">女</option>
+							</select>
+						</div>
+						<div class="form-group sel-2">
+							<label>出生年月：</label>
+							<select name="born-year">
+								<option value="" selected="selected" disabled="disabled">请选择出生年份</option>
+								<option value="1985">1985年</option>
+								<option value="1986">1986年</option>
+								<option value="1987">1987年</option>
+								<option value="1988">1988年</option>
+								<option value="1989">1989年</option>
+								<option value="1990">1990年</option>
+								<option value="1991">1991年</option>
+								<option value="1992">1992年</option>
+								<option value="1993">1993年</option>
+								<option value="1994">1994年</option>
+								<option value="1995">1995年</option>
+								<option value="1996">1996年</option>
+								<option value="1997">1997年</option>
+								<option value="1998">1998年</option>
+								<option value="1999">1999年</option>
+								<option value="2000">2000年</option>
+								<option value="2001">2001年</option>
+								<option value="2002">2002年</option>
+								<option value="2003">2003年</option>
+							</select>
+							<select name="born-month">
+								<option value="" selected="selected" disabled="disabled">请选择出生月份</option>
+								<option value="jan">1月</option>
+								<option value="feb">2月</option>
+								<option value="mar">3月</option>
+								<option value="apr">4月</option>
+								<option value="may">5月</option>
+								<option value="jun">6月</option>
+								<option value="jul">7月</option>
+								<option value="agu">8月</option>
+								<option value="sept">9月</option>
+								<option value="oct">10月</option>
+								<option value="nov">11月</option>
+								<option value="dec">12月</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>职业：</label>
+							<select id="occupation" name="occupation">
+								<!--具体职业设置需与英模沟通，可参考去年报名情况-->
+								<!--职业选择为“学生”时，出现学校名称输入框-->
+								<option value="" selected="selected" disabled="disabled">请选择职业</option>
+								<option value="1">学生</option>
+								<option value="2">模特</option>
+								<option value="3">摄影师</option>
+								<option value="4">白领</option>
+								<option value="5">教师</option>
+								<option value="6">自由职业</option>
+								<option value="7">其他</option>
+							</select>
+						</div>
+						<!--
+							<div class="form-group student" style="display: none;">
+							<label>学校：</label>
+							<input type="text" name="school" placeholder="请输入学校名字" />
+						</div>
+						-->
+						<div class="form-group">
+							<label>联系方式：</label>
+							<input type="tel" name="tel" placeholder="请输入联系电话或者手机号码" required="required" />
+						</div>
+					</div>
+					<div class="button-group">
+						<button class="submit" id="btnNext" type="button">下一步</button>
+					</div>
+				</fieldset>
+
+				<!--报名第二步-->
+				<fieldset class="reg-2" style="display: none;">
+					<h3>模特素质</h3>
+					<div class="content">
+						<div class="form-group">
+							<label>身高(cm)：</label>
+							<input type="number" name="height" placeholder="请输入身高" required="required" />
+						</div>
+						<div class="form-group">
+							<label>胸围(cm)：</label>
+							<input type="number" name="bust" placeholder="请输入胸围" required="required" />
+						</div>
+						<div class="form-group">
+							<label>腰围(cm)：</label>
+							<input type="number" name="waistline" placeholder="请输入腰围" required="required" />
+						</div>
+						<div class="form-group">
+							<label>臀围(cm)：</label>
+							<input type="number" name="hipline" placeholder="请输入臀围" required="required" />
+						</div>
+					</div>
+					<!--提交照片待完善-->
+					<div class="upload-pic">
+						<label>近照：</label>
+						<div class="upload-container">
+							<div class="pic-container">
+								<span>上传照片</span>
+								<img src="img/banner.jpg" />
+							</div>
+							<input type="file" accept="image/*" style="display: none;" />
+							<i class="close"></i>
+						</div>
+						<div class="upload-container border">
+							<div class="pic-container">
+								<span>上传照片</span>
+								<img src="#" />
+							</div>
+							<input type="file" accept="image/*" />
+							<i class="close" style="display: none;"></i>
+						</div>
+						<div class="upload-container border">
+							<div class="pic-container">
+								<span>上传照片</span>
+								<img src="#" />
+							</div>
+							<input type="file" accept="image/*" />
+							<i class="close" style="display: none;"></i>
+						</div>
+					</div>
+					<div class="button-group">
+						<button class="return" id="btnReturn" type="button">上一步</button>
+						<button class="submit" id="btnSubmit" type="button">提交</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+
+		<!--报名成功提示弹窗-->
+		<div class="pop-container" style="display: none;">
+			<div class="pop-bg"></div>
+			<div class="popover">
+				<img src="img/pic-success.png" alt="报名成功" />
+				<h4>报名成功</h4>
+				<p>请耐心等待大赛组委会的海选通知。</p>
+				<button>确 定</button>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="container">
+				<div class="left">
+					<ul class="nav">
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="introduction.html">大赛介绍</a>
+						</li>
+						<li>
+							<a href="registration.html">报名参赛</a>
+						</li>
+						<li>
+							<a href="previous-video-list.html">精彩回顾</a>
+						</li>
+						<li>
+							<a href="model-list-female.html">优秀选手</a>
+						</li>
+						<li>
+							<a href="cooperation.html">合作伙伴</a>
+						</li>
+					</ul>
+
+					<dl class="blogroll">
+						<dt>友情链接:</dt>
+						<dd>
+							<a href="http://www.eseemodel.com">英模文化</a>
+						</dd>
+						<dd>
+							<a href="http://www.eseekids.com">英模国际少儿模特大赛</a>
+						</dd>
+						<dd>
+							<a href="https://www.idouka.com">上海豆卡网络技术有限公司</a>
+						</dd>
+
+					</dl>
+				</div>
+				<div class="right">
+					<img class="qr-code" src="" alt="英模文化微信公众号" />
+					<dl class="contactway">
+						<!--联系方式需和英模确认-->
+						<dt>微博：</dt>
+						<dl>XXXXXX</dl>
+						<dt>Tel：</dt>
+						<dl>400-0000-0000</dl>
+						<dt>E-mail：</dt>
+						<dl>23879@df.com</dl>
+						<dt>Add：</dt>
+						<dl>XXXXXXXXXXXXXXXXX</dl>
+					</dl>
+				</div>
+				<p class="copyright">ALL CONTENT COPYRIGHT © esee model managment.</p>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script type="text/javascript" src="js/registration.js"></script>
+	</body>
+
+</html>

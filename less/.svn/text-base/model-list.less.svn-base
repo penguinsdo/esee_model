@@ -1,0 +1,135 @@
+/*!
+ * esee_model model-list 1.0.0
+ */
+
+// Reset
+@import "venders/normalize.less";
+// Components that this page dependent on.
+@import "components/header.less";
+@import "components/footer.less";
+@import "components/pagination.less";
+
+body {
+    min-width: 1250px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 24px;
+    border-bottom: 1px solid #A0A0A0;
+
+    h2 {
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+    .tab {
+        height: 40px;
+        padding-bottom: 30px;
+        padding-left: 470px;
+       a{
+           float: left;
+           display: block;
+           height: 38px;
+           width: 128px;
+           color: #FFFFFF;
+           background-color: #000000;
+           border: 1px solid #000000;
+           line-height: 38px;
+           &:first-child{
+               border-right: none;
+           }
+           
+           &.active, &:hover{
+               color: #000000;
+               background-color: #FFFFFF;
+               transition-duration: 0.3s;
+           }
+       }
+    }
+}
+
+.model-list {
+    height: 1508px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    li {
+        list-style: none;
+        position: relative;
+        float: left;
+        width: 280px;
+        height: 350px;
+        margin-bottom: 27px;
+        margin-right: 26.6px;
+        padding-left: 0;
+        overflow: hidden;
+        &:nth-child(4n+0) {
+            margin-right: 0;
+        }
+        img {
+            display: block;
+            width: 100%;
+            filter: saturate(0);
+        }
+        a .information {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -50px;
+            height: 50px;
+            width: 195px;
+            text-align: center;
+            background-color: #FFFFFF;
+            font-size: 18px;
+            color: #000000;
+            i:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 17px;
+                bottom: -60px;
+                height: 40px;
+                width: 3px;
+                background-color: #000000;
+            }
+            span {
+                position: relative;
+                display: block;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        a:hover {
+            img {
+                filter: saturate(1);
+                transition-duration: 0.5s;
+            }
+            .information {
+                bottom: 25px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                opacity: 1;
+                transition-duration: 0.5s;
+                i:before {
+                    bottom: -20px;
+                    transition-duration: 1s;
+                }
+            }
+        }
+    }
+}
+

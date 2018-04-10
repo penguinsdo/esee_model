@@ -1,0 +1,82 @@
+/*!
+ * footer component
+ */
+.footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    font-size: 14px;
+    background-color: #404040;
+    color: #FFFFFF;
+    .left {
+        float: left;
+        width: 60%;
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            margin-top: 0;
+            padding-left: 0;
+            li {
+                float: left;
+                list-style: none;
+                margin-right: 24px;
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    position: relative;
+                    top: 2px;
+                    height: 14px;
+                    width: 1px;
+                    margin-left: 24px;
+                    background-color: #FFFFFF;
+                }
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+        .blogroll {
+            clear: both;
+            padding-top: 22px;
+            line-height: 24px;
+            dt {
+                float: left;
+            }
+            dd {
+                margin-left: 70px;
+            }
+        }
+    }
+    .right {
+        width: 40%;
+        float: right;
+        .qr-code {
+            float: left;
+            height: 110px;
+            width: 110px;
+            margin-right: 18px;
+            background-color: #FFFFFF;
+        }
+        .contactway {
+            position: relative;
+            top: -6px;
+            margin-top: 0;
+            line-height: 26px;
+            dt {
+                float: left;
+            }
+            dl {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .copyright {
+        clear: both;
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        opacity: 0.5;
+        text-align: center;
+    }
+}

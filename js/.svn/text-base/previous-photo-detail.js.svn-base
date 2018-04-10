@@ -1,0 +1,13 @@
+$(document).ready(function() {
+	$('#picListInrow').on('click', 'img', function(e) {
+		e.preventDefault();
+		var $this = $(this);
+		var source = $this.attr('src');
+		var text = $this.attr('alt');
+		$('#placeholder').attr('src', source);
+		$('#placeholder').attr('alt', text);
+		$('#picIntro').replaceWith('<p id="picIntro">' + text + '</p>');
+		$('#picListInrow li').removeClass('active');
+		$this.parents('li').addClass('active');
+	});
+});

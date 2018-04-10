@@ -1,0 +1,44 @@
+/*function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if(typeof window.onload != "function") {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func;
+		}
+	}
+}
+
+function picGallery(){
+	if(!document.getElementById) return false;
+	if(!document.getElementById("pic-list")) return false;
+	if(!document.getElementById("placeholder")) return false;
+	
+	var picList = document.getElementById("pic-list");
+	var links = picList.querySelectorAll("img");
+	var placeholder = document.getElementById("placeholder")
+	
+	for (var i = 0; i < links.length; i++) {
+		links[i].addEventListener('click', function (e) {
+			e.preventDefault();
+			var source = this.getAttribute("src");
+			placeholder.setAttribute("src", source);
+		});
+	}
+	
+}
+addLoadEvent(picGallery());
+*/
+
+$(document).ready(function () {
+	var placeholder = $('#placeholder');
+	$('#pic-list').on('click', 'img', function (e) {
+		e.preventDefault();
+		var $this = $(this),
+			source = $this.attr("src");
+		placeholder.attr("src", source);
+		$('#pic-list li').removeClass('active');
+		$this.parents('li').addClass('active');
+	})
+});

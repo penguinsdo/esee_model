@@ -1,0 +1,14 @@
+$(document).ready(function(){
+	$('#brandList').on('click','a',function(e){
+		e.preventDefault;
+		var $this = $(this),
+			link = $this.attr('href'),
+			text = $this.children('img').attr('alt');
+		$('#brandPic img').attr('src', link);
+		$('#brandPic img').attr('alt', text);
+		console.log(text);
+		$('#brandList li').removeClass('active');
+		$this.parents('li').addClass('active');
+		return false;
+	});
+});

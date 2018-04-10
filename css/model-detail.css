@@ -1,0 +1,482 @@
+/*!
+ * esee_model model-detail 1.0.0
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/*!
+ * header component
+ */
+.header {
+  height: 100px;
+  border-bottom: 1px solid #A0A0A0;
+}
+.header .container {
+  height: 100%;
+}
+.header .container .logo {
+  height: 43px;
+  width: 150px;
+  position: relative;
+  top: 33px;
+  background-image: url(../img/header-logo.png);
+}
+.header .container .logo a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.header .container .nav {
+  margin-top: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+}
+.header .container .nav li {
+  float: left;
+  padding-left: 0;
+  margin-left: 80px;
+  list-style: none;
+  font-size: 16px;
+  color: #a0a0a0;
+}
+.header .container .nav li a {
+  padding-bottom: 0;
+}
+.header .container .nav li a:hover,
+.header .container .nav li .active {
+  color: #000000;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000000;
+  transition-duration: 0.3s;
+}
+/*!
+ * footer component
+ */
+.footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  font-size: 14px;
+  background-color: #404040;
+  color: #FFFFFF;
+}
+.footer .left {
+  float: left;
+  width: 60%;
+}
+.footer .left a:hover {
+  text-decoration: underline;
+}
+.footer .left .nav {
+  margin-top: 0;
+  padding-left: 0;
+}
+.footer .left .nav li {
+  float: left;
+  list-style: none;
+  margin-right: 24px;
+}
+.footer .left .nav li:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  height: 14px;
+  width: 1px;
+  margin-left: 24px;
+  background-color: #FFFFFF;
+}
+.footer .left .nav li:last-child:after {
+  display: none;
+}
+.footer .left .blogroll {
+  clear: both;
+  padding-top: 22px;
+  line-height: 24px;
+}
+.footer .left .blogroll dt {
+  float: left;
+}
+.footer .left .blogroll dd {
+  margin-left: 70px;
+}
+.footer .right {
+  width: 40%;
+  float: right;
+}
+.footer .right .qr-code {
+  float: left;
+  height: 110px;
+  width: 110px;
+  margin-right: 18px;
+  background-color: #FFFFFF;
+}
+.footer .right .contactway {
+  position: relative;
+  top: -6px;
+  margin-top: 0;
+  line-height: 26px;
+}
+.footer .right .contactway dt {
+  float: left;
+}
+.footer .right .contactway dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.footer .copyright {
+  clear: both;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  opacity: 0.5;
+  text-align: center;
+}
+body {
+  min-width: 1250px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.container {
+  width: 1200px;
+  position: relative;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+}
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #A0A0A0;
+}
+.title h2 {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+.model-detail {
+  height: 650px;
+}
+.model-detail .picgallery {
+  width: 516px;
+  border-right: 325px solid #f6f6f6;
+  background-color: #A0A0A0;
+  overflow: hidden;
+  height: 650px;
+  position: relative;
+}
+.model-detail .picgallery img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  width: 100%;
+}
+.model-detail .model-information {
+  position: absolute;
+  top: 50px;
+  left: 674px;
+}
+.model-detail .model-information h3 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: normal;
+}
+.model-detail .model-information h3:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 56px;
+  margin-top: 24px;
+  background-color: #000000;
+}
+.model-detail .model-information dl {
+  position: relative;
+  left: 80px;
+  top: -6px;
+  width: 440px;
+  margin-top: 0;
+  font-size: 20px;
+  line-height: 36px;
+}
+.model-detail .model-information dl dt {
+  float: left;
+  width: 80px;
+}
+.model-detail .pic-list {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+.model-detail .pic-list button {
+  height: 60px;
+  width: 30px;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  background: url(../img/sprite-page.png) no-repeat;
+  background-size: 120px 60px;
+}
+.model-detail .pic-list button.forward {
+  background-position: 0 0;
+}
+.model-detail .pic-list button.forward:hover {
+  background-position: -30px 0;
+}
+.model-detail .pic-list button.forward.disable,
+.model-detail .pic-list button.forward.disable:hover {
+  background-position: 0 0;
+  opacity: 0.3;
+}
+.model-detail .pic-list button.backward {
+  background-position: -60px 0;
+}
+.model-detail .pic-list button.backward:hover {
+  background-position: -90px 0;
+}
+.model-detail .pic-list button.backward.disable,
+.model-detail .pic-list button.backward.disable:hover {
+  background-position: -60px 0;
+  opacity: 0.3;
+}
+.model-detail .pic-list .list-container {
+  position: relative;
+  width: 556px;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.model-detail .pic-list ul {
+  position: relative;
+  left: 0;
+  height: 220px;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.model-detail .pic-list ul li {
+  list-style: none;
+  display: inline-block;
+  height: 210px;
+  width: 170px;
+  padding: 5px;
+  margin-right: 3px;
+}
+.model-detail .pic-list ul li.active {
+  padding: 2px;
+  border: 3px solid #e6be83;
+}
+.model-detail .pic-list ul li.active img {
+  opacity: 1;
+}
+.model-detail .pic-list ul li:last-child {
+  margin-right: 0;
+}
+.model-detail .pic-list ul li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #EEEEEE;
+  overflow: hidden;
+}
+.model-detail .pic-list ul li img {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  width: 100%;
+  opacity: 0.5;
+}
+.model-detail .pic-list ul li a:hover img {
+  opacity: 1;
+  transition-duration: 0.3s;
+}

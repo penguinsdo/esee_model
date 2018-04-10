@@ -1,0 +1,188 @@
+/*!
+ * esee_model previous-video-list 1.0.0
+ */
+
+// Reset
+@import "venders/normalize.less";
+// Components that this page dependent on.
+@import "components/header.less";
+@import "components/footer.less";
+@import "components/pagination.less";
+body {
+    min-width: 1250px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-top: 24px;
+    border-bottom: 1px solid #A0A0A0;
+    h2 {
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+    .tab {
+        height: 40px;
+        padding-bottom: 30px;
+        padding-left: 470px;
+        a {
+            float: left;
+            display: block;
+            height: 38px;
+            width: 128px;
+            color: #FFFFFF;
+            background-color: #000000;
+            border: 1px solid #000000;
+            line-height: 38px;
+            &:first-child {
+                border-right: none;
+            }
+            &.active,
+            &:hover {
+                color: #000000;
+                background-color: #FFFFFF;
+                transition-duration: 0.3s;
+            }
+        }
+    }
+}
+
+.video-list {
+    width: 1230px;
+    padding-left: 0;
+    li {
+        position: relative;
+        list-style: none;
+        float: left;
+        height: 250px;
+        width: 380px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        img {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+        i:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%);
+            height: 50px;
+            width: 68px;
+            opacity: 0.01;
+            background-image: url(../img/video-play.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .information {
+            position: absolute;
+            left: 20px;
+            bottom: -72px;
+            height: 42px;
+            width: 288px;
+            padding: 15px 26px;
+            background-color: #FFFFFF;
+            p {
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                font-size: 16px;
+                line-height: 22px;
+                overflow: hidden;
+            }
+            span:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 34px;
+                width: 3px;
+                left: 12px;
+                bottom: -60px;
+                background-color: #000000;
+            }
+        }
+        a:hover {
+            i:before{
+                opacity: 1;
+                transition-duration: 0.5s;
+            }
+            .information {
+                bottom: 15px;
+                transition-duration: 0.5s;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+                span:before {
+                    bottom: -15px;
+                    transition-duration: 1s;
+                }
+            }
+        }
+        &.first {
+            height: 530px;
+            width: 790px;
+            .information {
+                bottom: -88px;
+                height: 52px;
+                width: 620px;
+                padding: 18px 56px;
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                span:before {
+                    bottom: -100px;
+                    height: 60px;
+                }
+            }
+            i:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%);
+                background-image: url(../img/video-play.png);
+                height: 98px;
+                width: 130px;
+                opacity: 0.01;
+            }
+            a:hover {
+                i:before {
+                    opacity: 1;
+                    transition-duration: 0.5s;
+                }
+                .information {
+                    bottom: 30px;
+                    span:before {
+                        bottom: -30px;
+                    }
+                }
+            }
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        clear: both;
+    }
+}
